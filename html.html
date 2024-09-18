@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Multiple Visualisations | Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
+    integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+  <div class="page">
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-1">
+        <h1>Visualisations of Distributed Water Use</h1>
+        <p>This page displays two visualisations: a bar chart and a butterfly bar chart representing the distribution of water use in Australia.</p>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+    <!-- pure grid group -->
+    <div class="pure-g">
+      <div class="pure-u-1-2">
+        <div id="vis1" class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-2">
+        <div id="vis2" class="vis-container"></div>
+      </div>
+    </div>
+    <!-- end pure grid group -->
+
+  </div> <!-- end page -->
+
+  <script type="text/javascript">
+    // Bar chart visualisation
+    const specVis1 = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "data": {
+        "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/main/2.3%20Distributed%20water%20use%20by%20selected%20industries(a)%20and%20households%2C%20Australia.csv"
+      },
+      "transform": [
+        {
+          "fold": [
+            "Agriculture, forestry and fishing (GL)",
+            "Households (GL)",
+            "Manufacturing (GL)",
+            "Mining (GL)",
+            "Other industries (a) (GL)"
+          ],
+          "as": ["Sector", "Water use (GL)"]
+        }
+      ],
+      "mark": "bar",
+      "encoding": {
+        "x": {"field": "Year", "type": "ordinal", "title": "Year"},
+        "y": {
+          "field": "Water use (GL)",
+          "type": "quantitative",
+          "title": "Water use (GL)"
+        },
+        "color": {"field": "Sector", "type": "nominal", "title": "Sector"}
+      },
+      "title": "Distributed Water Use by Selected Industries and Households in Australia"
+    };
+    vegaEmbed("#vis1", specVis1, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+
+    // Butterfly chart visualisation
+    const specVis2 = {
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "description": "A butterfly bar chart showing expenditure and physical use of distributed water in Australia.",
+      "data": {
+        "values": [
+          {"Category": "Industries", "Type": "Expenditure", "Value": 3.16},
+          {"Category": "Industries", "Type": "Physical Use", "Value": 10.2},
+          {"Category": "Households", "Type": "Expenditure", "Value": 6.09},
+          {"Category": "Households", "Type": "Physical Use", "Value": 1.8}
+        ]
+      },
+      "spacing": 0,
+      "hconcat": [
+        {
+          "transform": [{"filter": "datum.Type == 'Expenditure'"}],
+          "title": "Expenditure",
+          "mark": "bar",
+          "encoding": {
+            "y": {
+              "field": "Category",
+              "type": "ordinal",
+              "axis": null,
+              "sort": "descending"
+            },
+            "x": {
+              "field": "Value",
+              "type": "quantitative",
+              "title": "Expenditure ($ billions)",
+              "axis": {"format": "s"},
+              "scale": {"domain": [0, 7], "reverse": true}
+            },
+            "color": {"field": "Type", "legend": null}
+          }
+        },
+        {
+          "width": 20,
+          "view": {"stroke": null},
+          "mark": {"type": "text", "align": "center"},
+          "encoding": {
+            "y": {
+              "field": "Category",
+              "type": "ordinal",
+              "axis": null,
+              "sort": "descending"
+            },
+            "text": {"field": "Category", "type": "ordinal"}
+          }
+        },
+        {
+          "transform": [{"filter": "datum.Type == 'Physical Use'"}],
+          "title": "Physical Use",
+          "mark": "bar",
+          "encoding": {
+            "y": {
+              "field": "Category",
+              "type": "ordinal",
+              "axis": null,
+              "sort": "descending"
+            },
+            "x": {
+              "field": "Value",
+              "type": "quantitative",
+              "title": "Physical Use (GL)",
+              "axis": {"format": "s"},
+              "scale": {"domain": [0, 10]}
+            },
+            "color": {"field": "Type", "legend": null}
+          }
+        }
+      ],
+      "config": {"view": {"stroke": null}, "axis": {"grid": false}}
+    };
+    vegaEmbed("#vis2", specVis2, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+
+</html>
