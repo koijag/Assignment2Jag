@@ -1,0 +1,111 @@
+Region,Region code (ASGS),Indicator,Unit,2014-15,2015-16,2016-17,2017-18,2018-19,2019-20,2020-21,2021-22
+New South Wales,1,Total water use by industry (a),ML," 21,159,273 "," 19,365,408 "," 23,117,581 "," 22,186,353 "," 16,192,082 "," 12,342,251 "," 19,611,474 "," 21,647,435 "
+New South Wales,1,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 4,532,868 "," 3,602,133 "," 5,092,371 "," 5,458,880 "," 3,550,967 "," 2,132,821 "," 4,099,644 "," 4,483,865 "
+New South Wales,1,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 3,995,288 "," 3,090,799 "," 4,517,784 "," 4,854,999 "," 2,982,694 "," 1,567,189 "," 3,511,287 "," 3,901,033 "
+New South Wales,1,Total water use by households (b),ML," 534,529 "," 543,236 "," 560,169 "," 598,213 "," 575,543 "," 551,034 "," 544,567 "," 528,382 "
+New South Wales,1,Total water use (a),ML," 21,693,802 "," 19,908,645 "," 23,677,751 "," 22,784,566 "," 16,767,624 "," 12,893,285 "," 20,156,041 "," 22,175,817 "
+New South Wales,1,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 5,067,397 "," 4,145,370 "," 5,652,540 "," 6,057,092 "," 4,126,509 "," 2,683,856 "," 4,644,211 "," 5,012,247 "
+New South Wales,1,Gross Value Added (GVA) - chain volume measures,$m," 521,779 "," 539,144 "," 555,518 "," 569,984 "," 586,247 "," 583,765 "," 598,544 "," 612,325 "
+New South Wales,1,Estimated population as of 30 June (f),persons," 7,616,168 "," 7,732,858 "," 7,855,316 "," 7,954,476 "," 8,046,748 "," 8,110,610 "," 8,097,062 "," 8,165,731 "
+New South Wales,1,Estimated number of households at 30 June,households," 2,850,983 "," 2,896,280 "," 2,960,272 "," 3,017,797 "," 3,073,900 "," 3,119,657 "," 3,132,439 "," 3,172,055 "
+New South Wales,1,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.67 , 0.54 , 0.72 , 0.76 , 0.51 , 0.33 , 0.57 , 0.61 
+New South Wales,1,Total household water use per household (b),ML per household, 0.19 , 0.19 , 0.19 , 0.20 , 0.19 , 0.18 , 0.17 , 0.17 
+New South Wales,1,Total water consumption (c),ML," 5,243,836 "," 4,111,597 "," 5,584,157 "," 6,015,754 "," 4,063,758 "," 2,566,968 "," 4,579,322 "," 4,851,227 "
+Victoria,2,Total water use by industry (a),ML," 12,159,082 "," 11,923,306 "," 11,282,234 "," 12,146,701 "," 11,844,883 "," 10,416,582 "," 10,973,383 "," 10,919,967 "
+Victoria,2,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 3,020,634 "," 2,945,216 "," 2,812,090 "," 3,171,772 "," 2,989,647 "," 2,309,896 "," 2,628,065 "," 2,468,577 "
+Victoria,2,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 2,692,003 "," 2,616,385 "," 2,492,647 "," 2,835,878 "," 2,652,713 "," 1,995,735 "," 2,326,333 "," 2,169,340 "
+Victoria,2,Total water use by households (b),ML," 374,383 "," 399,571 "," 389,607 "," 399,167 "," 418,648 "," 414,802 "," 420,807 "," 419,868 "
+Victoria,2,Total water use (a),ML," 12,533,466 "," 12,322,877 "," 11,671,841 "," 12,545,868 "," 12,263,532 "," 10,831,383 "," 11,394,190 "," 11,339,836 "
+Victoria,2,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 3,395,018 "," 3,344,787 "," 3,201,696 "," 3,570,939 "," 3,408,296 "," 2,724,698 "," 3,048,872 "," 2,888,445 "
+Victoria,2,Gross Value Added (GVA) - chain volume measures,$m," 385,236 "," 397,658 "," 413,479 "," 427,485 "," 441,255 "," 442,091 "," 440,511 "," 466,349 "
+Victoria,2,Estimated population as of 30 June (f),persons," 6,022,322 "," 6,173,172 "," 6,302,608 "," 6,423,038 "," 6,537,305 "," 6,615,046 "," 6,547,822 "," 6,625,964 "
+Victoria,2,Estimated number of households at 30 June,households," 2,287,704 "," 2,343,894 "," 2,403,726 "," 2,461,906 "," 2,520,319 "," 2,565,166 "," 2,549,155 "," 2,592,236 "
+Victoria,2,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.56 , 0.54 , 0.51 , 0.56 , 0.52 , 0.41 , 0.47 , 0.44 
+Victoria,2,Total household water use per household (b),ML per household, 0.16 , 0.17 , 0.16 , 0.16 , 0.17 , 0.16 , 0.17 , 0.16 
+Victoria,2,Total water consumption (c),ML," 3,507,462 "," 3,431,245 "," 3,084,119 "," 3,614,449 "," 3,493,169 "," 2,648,147 "," 3,017,272 "," 2,842,891 "
+Queensland,3,Total water use by industry (a),ML," 7,382,058 "," 7,015,055 "," 6,660,236 "," 6,765,293 "," 5,777,374 "," 6,208,497 "," 6,561,116 "," 7,042,818 "
+Queensland,3,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 3,332,530 "," 3,186,721 "," 3,118,896 "," 3,164,323 "," 2,433,896 "," 2,547,133 "," 2,833,724 "," 2,909,021 "
+Queensland,3,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 2,749,020 "," 2,612,894 "," 2,548,493 "," 2,573,131 "," 1,852,006 "," 1,943,503 "," 2,239,118 "," 2,360,818 "
+Queensland,3,Total water use by households (b),ML," 331,838 "," 340,271 "," 338,882 "," 340,804 "," 348,983 "," 369,308 "," 362,742 "," 346,506 "
+Queensland,3,Total water use (a),ML," 7,713,896 "," 7,355,326 "," 6,999,119 "," 7,106,098 "," 6,126,357 "," 6,577,805 "," 6,923,857 "," 7,389,324 "
+Queensland,3,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 3,664,368 "," 3,526,991 "," 3,457,779 "," 3,505,127 "," 2,782,879 "," 2,916,441 "," 3,196,466 "," 3,255,527 "
+Queensland,3,Gross Value Added (GVA) - chain volume measures,$m," 305,275 "," 312,315 "," 320,465 "," 332,338 "," 336,199 "," 334,518 "," 343,745 "," 362,031 "
+Queensland,3,Estimated population as of 30 June (f),persons," 4,777,692 "," 4,845,152 "," 4,926,380 "," 5,006,623 "," 5,088,847 "," 5,165,613 "," 5,215,814 "," 5,320,496 "
+Queensland,3,Estimated number of households at 30 June,households," 1,809,713 "," 1,839,415 "," 1,877,644 "," 1,915,170 "," 1,955,140 "," 1,994,909 "," 2,025,875 "," 2,074,731 "
+Queensland,3,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.77 , 0.73 , 0.70 , 0.70 , 0.55 , 0.56 , 0.61 , 0.61 
+Queensland,3,Total household water use per household (b),ML per household, 0.18 , 0.19 , 0.18 , 0.18 , 0.18 , 0.19 , 0.18 , 0.17 
+Queensland,3,Total water consumption (c),ML," 3,591,746 "," 3,464,438 "," 3,340,672 "," 3,362,969 "," 2,721,686 "," 2,865,374 "," 3,080,894 "," 3,066,458 "
+South Australia,4,Total water use by industry (a),ML," 1,513,344 "," 1,629,419 "," 1,307,832 "," 1,411,258 "," 1,468,159 "," 1,599,938 "," 1,641,287 "," 1,536,272 "
+South Australia,4,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 837,277 "," 928,550 "," 688,335 "," 747,938 "," 789,910 "," 866,988 "," 897,407 "," 837,837 "
+South Australia,4,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 694,645 "," 788,616 "," 561,075 "," 612,881 "," 657,410 "," 731,475 "," 759,145 "," 701,411 "
+South Australia,4,Total water use by households (b),ML," 123,958 "," 133,629 "," 115,670 "," 136,679 "," 140,129 "," 136,211 "," 141,253 "," 141,125 "
+South Australia,4,Total water use (a),ML," 1,637,302 "," 1,763,047 "," 1,423,502 "," 1,547,938 "," 1,608,287 "," 1,736,150 "," 1,782,539 "," 1,677,397 "
+South Australia,4,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 961,235 "," 1,062,179 "," 804,005 "," 884,617 "," 930,039 "," 1,003,199 "," 1,038,659 "," 978,962 "
+South Australia,4,Gross Value Added (GVA) - chain volume measures,$m," 100,073 "," 100,413 "," 101,883 "," 104,177 "," 105,331 "," 104,702 "," 109,430 "," 115,474 "
+South Australia,4,Estimated population as of 30 June (f),persons," 1,700,668 "," 1,712,843 "," 1,728,673 "," 1,746,137 "," 1,767,395 "," 1,790,355 "," 1,802,601 "," 1,821,200 "
+South Australia,4,Estimated number of households at 30 June,households," 693,206 "," 699,597 "," 706,146 "," 713,585 "," 722,450 "," 732,477 "," 737,924 "," 746,485 "
+South Australia,4,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.57 , 0.62 , 0.47 , 0.51 , 0.53 , 0.56 , 0.58 , 0.54 
+South Australia,4,Total household water use per household (b),ML per household, 0.18 , 0.19 , 0.16 , 0.19 , 0.19 , 0.19 , 0.19 , 0.19 
+South Australia,4,Total water consumption (c),ML," 853,392 "," 937,230 "," 675,274 "," 738,890 "," 828,367 "," 910,952 "," 945,126 "," 869,321 "
+Western Australia,5,Total water use by industry (a),ML," 4,010,176 "," 4,071,477 "," 4,095,474 "," 4,199,672 "," 4,451,641 "," 4,379,889 "," 3,726,510 "," 3,415,945 "
+Western Australia,5,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 1,226,709 "," 1,249,022 "," 1,289,522 "," 1,252,688 ", np ," 1,466,632 "," 1,570,791 "," 1,655,227 "
+Western Australia,5,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 356,638 "," 362,355 "," 374,135 "," 366,954 "," 482,072 "," 491,732 "," 469,457 "," 452,526 "
+Western Australia,5,Total water use by households (b),ML," 242,481 "," 245,175 "," 233,745 "," 234,417 "," 236,322 "," 247,007 "," 248,005 "," 251,455 "
+Western Australia,5,Total water use (a),ML," 4,252,657 "," 4,316,653 "," 4,329,219 "," 4,434,089 "," 4,687,963 "," 4,626,895 "," 3,974,515 "," 3,667,400 "
+Western Australia,5,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 1,469,189 "," 1,494,198 "," 1,523,267 "," 1,487,104 ", np ," 1,713,639 "," 1,818,796 "," 1,906,682 "
+Western Australia,5,Gross Value Added (GVA) - chain volume measures,$m," 329,450 "," 332,697 "," 326,075 "," 334,044 "," 340,209 "," 344,656 "," 353,823 "," 364,709 "
+Western Australia,5,Estimated population as of 30 June (f),persons," 2,540,672 "," 2,555,978 "," 2,585,720 "," 2,617,792 "," 2,659,625 "," 2,712,912 "," 2,749,365 "," 2,789,148 "
+Western Australia,5,Estimated number of households at 30 June,households," 964,934 "," 974,888 "," 985,238 "," 996,872 "," 1,013,268 "," 1,035,074 "," 1,049,966 "," 1,068,264 "
+Western Australia,5,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.58 , 0.58 , 0.59 , 0.57 , np , 0.63 , 0.66 , 0.68 
+Western Australia,5,Total household water use per household (b),ML per household, 0.25 , 0.25 , 0.24 , 0.24 , 0.23 , 0.24 , 0.24 , 0.24 
+Western Australia,5,Total water consumption (c),ML," 1,075,878 "," 1,062,668 "," 1,063,039 "," 1,069,711 "," 1,236,850 "," 1,230,129 "," 1,253,939 "," 1,301,956 "
+Tasmania,6,Total water use by industry (a),ML," 33,307,846 "," 31,476,724 "," 35,935,239 "," 36,729,097 "," 36,806,023 "," 41,244,406 "," 33,625,525 "," 34,219,424 "
+Tasmania,6,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 303,464 "," 374,393 "," 327,466 "," 361,931 "," 373,396 "," 418,403 "," 436,576 "," 430,690 "
+Tasmania,6,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 228,394 "," 302,876 "," 248,355 "," 274,581 "," 290,638 "," 336,497 "," 344,788 "," 337,803 "
+Tasmania,6,Total water use by households (b),ML," 30,984 "," 31,900 "," 32,681 "," 35,483 "," 37,252 "," 36,432 "," 34,226 "," 34,578 "
+Tasmania,6,Total water use (a),ML," 33,338,831 "," 31,508,624 "," 35,967,920 "," 36,764,580 "," 36,843,276 "," 41,280,838 "," 33,659,751 "," 34,254,002 "
+Tasmania,6,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 334,448 "," 406,292 "," 360,147 "," 397,415 "," 410,649 "," 454,835 "," 470,802 "," 465,268 "
+Tasmania,6,Gross Value Added (GVA) - chain volume measures,$m," 27,927 "," 28,297 "," 28,658 "," 29,739 "," 30,951 "," 31,164 "," 32,749 "," 34,350 "
+Tasmania,6,Estimated population as of 30 June (f),persons," 515,117 "," 517,514 "," 526,762 "," 537,291 "," 547,841 "," 557,578 "," 567,239 "," 571,013 "
+Tasmania,6,Estimated number of households at 30 June,households," 216,969 "," 219,705 "," 222,639 "," 225,997 "," 229,166 "," 232,107 "," 235,168 "," 236,506 "
+Tasmania,6,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.65 , 0.79 , 0.68 , 0.74 , 0.75 , 0.82 , 0.83 , 0.81 
+Tasmania,6,Total household water use per household (b),ML per household, 0.14 , 0.15 , 0.15 , 0.16 , 0.16 , 0.16 , 0.15 , 0.15 
+Tasmania,6,Total water consumption (c),ML," 262,683 "," 340,239 "," 282,669 "," 325,648 "," 345,533 "," 391,380 "," 402,633 "," 393,685 "
+Northern Territory,7,Total water use by industry (a),ML," 226,895 "," 203,323 "," 240,900 "," 232,747 "," 218,168 "," 214,158 "," 231,033 "," 212,609 "
+Northern Territory,7,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 122,313 "," 104,769 "," 141,665 "," 133,087 "," 119,429 "," 114,737 "," 130,454 "," 117,563 "
+Northern Territory,7,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 56,390 "," 43,419 "," 89,906 "," 81,573 "," 58,243 "," 42,277 "," 61,734 "," 57,371 "
+Northern Territory,7,Total water use by households (b),ML," 27,474 "," 27,578 "," 24,852 "," 25,890 "," 26,607 "," 26,321 "," 25,486 "," 26,567 "
+Northern Territory,7,Total water use (a),ML," 254,369 "," 230,900 "," 265,752 "," 258,637 "," 244,775 "," 240,479 "," 256,519 "," 239,176 "
+Northern Territory,7,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 149,788 "," 132,347 "," 166,518 "," 158,977 "," 146,036 "," 141,058 "," 155,940 "," 144,131 "
+Northern Territory,7,Gross Value Added (GVA) - chain volume measures,$m," 21,738 "," 22,091 "," 22,420 "," 22,884 "," 22,725 "," 24,246 "," 23,791 "," 25,058 "
+Northern Territory,7,Estimated population as of 30 June (f),persons," 244,692 "," 245,678 "," 247,412 "," 247,095 "," 246,559 "," 247,428 "," 248,151 "," 250,219 "
+Northern Territory,7,Estimated number of households at 30 June,households," 80,125 "," 80,598 "," 80,647 "," 80,152 "," 79,613 "," 79,527 "," 79,381 "," 79,958 "
+Northern Territory,7,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.61 , 0.54 , 0.67 , 0.64 , 0.59 , 0.57 , 0.63 , 0.58 
+Northern Territory,7,Total household water use per household (b),ML per household, 0.34 , 0.34 , 0.31 , 0.32 , 0.33 , 0.33 , 0.32 , 0.33 
+Northern Territory,7,Total water consumption (c),ML," 129,150 "," 111,275 "," 144,709 "," 139,387 "," 125,447 "," 114,213 "," 125,488 "," 120,503 "
+Australian Capital Territory,8,Total water use by industry (a),ML," 92,448 "," 97,587 "," 97,385 "," 94,961 "," 99,606 "," 103,885 "," 104,162 "," 102,962 "
+Australian Capital Territory,8,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 11,176 "," 12,280 "," 10,973 "," 11,895 ", np ," 12,991 "," 10,419 "," 8,997 "
+Australian Capital Territory,8,"Total water use by Agriculture, forestry and fishing industry (a)",ML, 242 , 306 , 469 , 291 , 233 , 265 , 319 , 320 
+Australian Capital Territory,8,Total water use by households (b),ML," 29,458 "," 31,272 "," 31,000 "," 32,337 "," 33,881 "," 35,564 "," 32,014 "," 30,390 "
+Australian Capital Territory,8,Total water use (a),ML," 121,906 "," 128,859 "," 128,385 "," 127,298 "," 133,487 "," 139,449 "," 136,176 "," 133,352 "
+Australian Capital Territory,8,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 40,634 "," 43,552 "," 41,973 "," 44,232 ", np ," 48,555 "," 42,433 "," 39,387 "
+Australian Capital Territory,8,Gross Value Added (GVA) - chain volume measures,$m," 33,147 "," 34,597 "," 35,944 "," 37,472 "," 39,064 "," 40,775 "," 42,208 "," 43,053 "
+Australian Capital Territory,8,Estimated population as of 30 June (f),persons," 395,813 "," 403,104 "," 415,046 "," 426,081 "," 435,730 "," 444,903 "," 452,508 "," 456,844 "
+Australian Capital Territory,8,Estimated number of households at 30 June,households," 153,709 "," 157,441 "," 161,738 "," 165,997 "," 169,639 "," 173,046 "," 176,259 "," 178,319 "
+Australian Capital Territory,8,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.10 , 0.11 , 0.10 , 0.10 , np , 0.11 , 0.09 , 0.09 
+Australian Capital Territory,8,Total household water use per household (b),ML per household, 0.19 , 0.20 , 0.19 , 0.19 , 0.20 , 0.21 , 0.18 , 0.17 
+Australian Capital Territory,8,Total water consumption (c),ML," 13,813 "," 15,862 "," 11,695 "," 15,667 "," 18,979 "," 21,003 "," 10,036 "," 3,289 "
+Australia,0,Total water use by industry (a),ML," 79,851,122 "," 75,782,299 "," 82,736,882 "," 83,766,082 "," 76,857,936 "," 76,509,605 "," 76,474,490 "," 79,097,432 "
+Australia,0,"Total water use by industry (less Electricity, gas, water and waste services) (a)",ML," 13,386,971 "," 12,403,083 "," 13,481,319 "," 14,302,513 "," 11,702,276 "," 9,869,602 "," 12,607,080 "," 12,911,778 "
+Australia,0,"Total water use by Agriculture, forestry and fishing industry (a)",ML," 10,772,619 "," 9,817,650 "," 10,832,865 "," 11,600,288 "," 8,976,010 "," 7,108,674 "," 9,712,181 "," 9,980,622 "
+Australia,0,Total water use by households (b),ML," 1,695,106 "," 1,752,631 "," 1,726,606 "," 1,802,990 "," 1,817,365 "," 1,816,679 "," 1,809,099 "," 1,778,872 "
+Australia,0,Total water use (a),ML," 81,546,229 "," 77,534,931 "," 84,463,488 "," 85,569,072 "," 78,675,301 "," 78,326,284 "," 78,283,589 "," 80,876,304 "
+Australia,0,"Total water use (less Electricity, gas, water and waste services) (a)",ML," 15,082,077 "," 14,155,715 "," 15,207,924 "," 16,105,503 "," 13,519,641 "," 11,686,281 "," 14,416,179 "," 14,690,650 "
+Australia,0,Gross Value Added (GVA) - chain volume measures,$m," 1,720,198 "," 1,763,762 "," 1,804,647 "," 1,858,746 "," 1,902,871 "," 1,906,124 "," 1,944,802 "," 2,023,349 "
+Australia,0,Estimated population as of 30 June (f),persons," 23,813,144 "," 24,186,299 "," 24,587,917 "," 24,958,533 "," 25,330,050 "," 25,644,445 "," 25,680,562 "," 26,000,615 "
+Australia,0,Estimated number of households at 30 June,households," 9,057,343 "," 9,211,818 "," 9,398,050 "," 9,577,476 "," 9,763,495 "," 9,931,963 "," 9,986,167 "," 10,148,554 "
+Australia,0,"Total water use (less Electricity, gas, water and waste services) per capita (a)",ML per capita, 0.63 , 0.59 , 0.62 , 0.65 , 0.53 , 0.46 , 0.56 , 0.57 
+Australia,0,Total household water use per household (b),ML per household, 0.19 , 0.19 , 0.18 , 0.19 , 0.19 , 0.18 , 0.18 , 0.18 
+Australia,0,Total water consumption (c),ML," 14,677,959 "," 13,474,555 "," 14,186,333 "," 15,282,474 "," 12,833,789 "," 10,748,166 "," 13,414,709 "," 13,449,330 "
+Australia,0,Water intensity (d),ML/$m GVA, 8.53 , 7.64 , 7.86 , 8.22 , 6.74 , 5.64 , 6.90 , 6.65 
+Australia,0,Water productivity (e),$m GVA/ML, 0.12 , 0.13 , 0.13 , 0.12 , 0.15 , 0.18 , 0.15 , 0.15 
