@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
+</head>
+<body>
+  <div id="vis"/>
+  <script>
+    const spec = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Water Distribution Across Australian States (2021-22)",
+    "fontSize": 20,
+    "anchor": "start",
+    "fontWeight": "bold"
+  },
+  "width": 700,
+  "height": 500,
+  "data": {
+    "url": "https://raw.githubusercontent.com/koijag/FIT3179-VIS-2/main/STE_2021_AUST_GDA94.json",
+    "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA94"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.STE_NAME21",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/table_12_3.csv"
+        },
+        "key": "Region",
+        "fields": [
+          "2014-15",
+          "2015-16",
+          "2016-17",
+          "2017-18",
+          "2018-19",
+          "2019-20",
+          "2020-21",
+          "2021-22"
+        ]
+      }
+    },
+    {
+      "fold": [
+        "2014-15",
+        "2015-16",
+        "2016-17",
+        "2017-18",
+        "2018-19",
+        "2019-20",
+        "2020-21",
+        "2021-22"
+      ],
+      "as": ["Year", "Water_Usage"]
+    },
+    {"filter": {"param": "year_selection"}},
+        {
+          "filter": "datum['Water_Usage'] != null"  // Filter null values to avoid unnecessary computations
+        }
+    
+  ],
+  "projection": {"type": "mercator"},
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "Water_Usage",
+      "type": "quantitative",
+      "scale": {"scheme": "blues"}
+    },
+    "tooltip": [
+      {"field": "properties.STE_NAME21", "type": "nominal", "title": "State"},
+      {
+        "field": "Water_Usage",
+        "type": "quantitative",
+        "title": "Water Supply (GL)"
+      }
+    ]
+  },
+  "params": [
+    {
+      "name": "year_selection",
+      "value": "2021-22",
+      "bind": {
+        "input": "range",
+        "min": 2014,
+        "max": 2022,
+        "step": 1,
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "config": {}
+};
+    vegaEmbed("#vis", spec, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+  </script>
+</body>
+</html>
