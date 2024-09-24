@@ -1,0 +1,29 @@
+            Australian Bureau of Statistics,Unnamed: 1,Unnamed: 2,Unnamed: 3,Unnamed: 4,Unnamed: 5,Unnamed: 6,Unnamed: 7,Unnamed: 8,Unnamed: 9,Unnamed: 10,Unnamed: 11,Unnamed: 12
+"4610.0 Water Account, Australia, 2021-22",,,,,,,,,,,,
+Released at 11:30 am (Canberra time) 19 October 2023,,,,,,,,,,,,
+"Table 12.3 Water losses from distribution systems, Water Supply, Sewerage and Drainage Services Industry, 2014-15 to 2021-22",,,,,,,,,,,,
+,,,,,,,,,,,,
+Region,Region code (ASGS),Industry,Measure,Unit,2014-15,2015-16,2016-17,2017-18,2018-19,2019-20,2020-21,2021-22
+New South Wales,1,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,948591,742075,np,617595.5148,662863.4148,571084.91,714690,795207
+New South Wales,1,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.1918,0.1957,np,0.1129,0.1831,0.2417,0.1588,0.1624
+Victoria,2,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,510516,488811,304104.3462,466101,485639,343604,320070,380887
+Victoria,2,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.1527,0.1489,0.1,0.1329,0.1457,0.1315,0.1062,0.1304
+Queensland,3,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,286703,284412,np,275873.0984,327054,351645,324570,302831
+Queensland,3,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.1141,0.1216,np,0.127,0.1748,0.1635,0.143,0.1206
+South Australia,4,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,29274,15830,22366.9497,16195,25295,35187,33783,30169
+South Australia,4,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.0581,0.0292,0.0502,0.0325,0.0492,0.0635,0.0591,0.0581
+Western Australia,5,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,122822,100146,106673.3087,131540,154354,131243,120797,155483
+Western Australia,5,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.1968,0.1696,0.1778,0.2037,0.2119,0.1757,0.1746,0.2165
+Tasmania,6,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,23877,24127,23716,25220,26769,31675,33058,36202
+Tasmania,6,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.1909,0.1396,0.1481,0.1374,0.1364,0.1358,0.1476,0.1532
+Northern Territory,7,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,9760,7264,7237,7727,7576,7338,8231,6518
+Northern Territory,7,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.1588,0.1225,0.1318,0.1344,0.1282,0.1253,0.148,0.1173
+Australian Capital Territory,8,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,2821,2878,2792,np,3019,3172,3627,3266
+Australian Capital Territory,8,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.0669,0.0636,0.0639,np,0.0622,0.0625,0.08,0.0782
+Australia,0,"Water Supply, Sewerage and Drainage Services",Volume of water losses (a),ML,1934364,1665543,1474594.9518,np,1692569.4148,1474948.91,1558826,1710563
+Australia,0,"Water Supply, Sewerage and Drainage Services",Proportion to distributed water,%,0.1591,0.137,0.1213,np,0.1392,0.1213,0.1282,0.1407
+,,,,,,,,,,,,
+(a) Includes real and apparent losses,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+© Commonwealth of Australia 2023,,,,,,,,,,,,
