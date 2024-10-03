@@ -9,6 +9,52 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css"
     integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .page {
+      max-width: 1200px;
+      width: 100%;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .vis-container {
+      margin: 20px;
+    }
+
+    .text-between {
+      text-align: center;
+      margin: 10px 0;
+      font-size: 1.1em;
+      line-height: 1.4;
+    }
+
+    .center-map {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      flex-direction: column;
+    }
+
+    .annotation-text {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1em;
+      color: red;
+      font-style: italic;
+    }
+  </style>
 </head>
 
 <body>
@@ -17,23 +63,45 @@
 
     <!-- pure grid group -->
     <div class="pure-g">
-      <div class="pure-u-1-1">
+      <div class="pure-u-1">
         <h1>Visualisations of Distributed Water Use</h1>
-        <p>This page displays two visualisations: a bar chart and a butterfly bar chart representing the distribution of water use in Australia.</p>
+        <p>This page displays three visualisations: a bar chart, a butterfly bar chart, and a map representing the distribution of water use in Australia.</p>
       </div>
     </div>
     <!-- end pure grid group -->
 
-    <!-- pure grid group -->
+    <!-- pure grid group for top row visualisations and text in between -->
     <div class="pure-g">
-      <div class="pure-u-1-1">
+      <div class="pure-u-2-5">
         <div id="vis1" class="vis-container"></div>
       </div>
-      <div class="pure-u-1-2">
+      <div class="pure-u-1-5 text-between">
+        <p>Distributed water use is driven by demand from the Agriculture industry and includes water from irrigation suppliers and paid river water allocations. In 2021-22, the Agriculture, forestry and fishing industry accounted for 61% of all distributed water used. Distributed water use for this industry increased by 8% in 2021-22, to 7,336 GL.</p>
+      </div>
+      <div class="pure-u-2-5">
         <div id="vis2" class="vis-container"></div>
       </div>
     </div>
     <!-- end pure grid group -->
+
+<!-- pure grid group for map visualisation -->
+<div class="center-map">
+  <div id="vis3" class="vis-container"></div>
+  <!-- Annotation Text above the selection menu -->
+  <p class="annotation-text">Note: Data shows water supply across the entire state, accuracy may vary.</p>
+  <!-- Dropdown menu for year selection -->
+  <div id="year-selection" class="left-aligned-selection"></div>
+</div>
+<!-- end pure grid group -->
+
+<style>
+  .left-aligned-selection {
+    display: flex;
+    justify-content: flex-start; /* Aligns the dropdown to the left */
+    width: 100%;
+    margin-top: 10px;
+  }
+</style>
 
   </div> <!-- end page -->
 
@@ -64,9 +132,24 @@
           "type": "quantitative",
           "title": "Water use (GL)"
         },
-        "color": {"field": "Sector", "type": "nominal", "title": "Sector"}
+        "color": {
+          "field": "Sector",
+          "type": "nominal",
+          "title": "Sector",
+          "scale": {"scheme": "blues"}
+        },
+        "tooltip": [
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "Sector", "type": "nominal", "title": "Sector"},
+          {"field": "Water use (GL)", "type": "quantitative", "title": "Water Use (GL)"}
+        ]
       },
-      "title": "Distributed Water Use by Selected Industries and Households in Australia"
+      "title": {
+        "text": "Distributed Water Use",
+        "fontSize": 20,
+        "anchor": "start",  // Keep the title aligned to the left
+        "fontWeight": "bold"
+      }
     };
     vegaEmbed("#vis1", specVis1, {mode: "vega-lite"}).then(console.log).catch(console.warn);
 
@@ -86,8 +169,13 @@
       "hconcat": [
         {
           "transform": [{"filter": "datum.Type == 'Expenditure'"}],
-          "title": "Expenditure",
-          "mark": "bar",
+          "title": {
+            "text": "Expenditure",
+            "fontSize": 16,
+            "anchor": "start",  // Keep the title aligned to the left
+            "fontWeight": "bold"
+          },
+          "mark": {"type": "bar", "color": "#1f77b4"}, // Blue color for expenditure bars
           "encoding": {
             "y": {
               "field": "Category",
@@ -102,7 +190,10 @@
               "axis": {"format": "s"},
               "scale": {"domain": [0, 7], "reverse": true}
             },
-            "color": {"field": "Type", "legend": null}
+            "tooltip": [
+              {"field": "Category", "type": "nominal", "title": "Category"},
+              {"field": "Value", "type": "quantitative", "title": "Expenditure ($ billions)"}
+            ]
           }
         },
         {
@@ -121,8 +212,13 @@
         },
         {
           "transform": [{"filter": "datum.Type == 'Physical Use'"}],
-          "title": "Physical Use",
-          "mark": "bar",
+          "title": {
+            "text": "Physical Use",
+            "fontSize": 16,
+            "anchor": "start",  // Keep the title aligned to the left
+            "fontWeight": "bold"
+          },
+          "mark": {"type": "bar", "color": "#4fa3d9"}, // Lighter blue for physical use bars
           "encoding": {
             "y": {
               "field": "Category",
@@ -137,13 +233,86 @@
               "axis": {"format": "s"},
               "scale": {"domain": [0, 10]}
             },
-            "color": {"field": "Type", "legend": null}
+            "tooltip": [
+              {"field": "Category", "type": "nominal", "title": "Category"},
+              {"field": "Value", "type": "quantitative", "title": "Physical Use (GL)"}
+            ]
           }
         }
       ],
       "config": {"view": {"stroke": null}, "axis": {"grid": false}}
     };
     vegaEmbed("#vis2", specVis2, {mode: "vega-lite"}).then(console.log).catch(console.warn);
+
+    // Map visualisation
+    const specVis3 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/koijag/FIT3179-VIS-2/main/STE_2021_AUST_GDA94.json",
+      "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA94"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.STE_NAME21",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/table_12_3.csv"
+          },
+          "key": "Region",
+          "fields": [
+            "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"
+          ]
+        }
+      },
+      {
+        "fold": ["2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"],
+        "as": ["Year", "Water_Usage"]
+      },
+      {
+        "filter": "datum['Water_Usage'] != null"
+      },
+      {
+        "filter": "datum.Year == year_selection" // Filter the data based on the selected year
+      }
+    ],
+    "projection": {"type": "mercator"},
+    "mark": "geoshape",
+    "encoding": {
+      "color": {
+        "field": "Water_Usage",
+        "type": "quantitative",
+        "scale": {"scheme": "blues"},
+        "title": "Water Usage (GL)"
+      },
+      "tooltip": [
+        {"field": "properties.STE_NAME21", "type": "nominal", "title": "State"},
+        {"field": "Year", "type": "ordinal", "title": "Year"},
+        {"field": "Water_Usage", "type": "quantitative", "title": "Water Supply (GL)"}
+      ]
+    },
+    "width": 700,
+    "height": 500,
+    "title": {
+      "text": "Water Distribution Across Australian States (2021-22)",
+      "fontSize": 20,
+      "anchor": "start",
+      "fontWeight": "bold"
+    },
+    "params": [
+      {
+        "name": "year_selection",
+        "value": "2021-22",
+        "bind": {
+          "element": "#year-selection",  // Bind the selection menu to the specific div element
+          "input": "select",
+          "options": ["2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"],
+          "name": "Select Year: "
+        }
+      }
+    ],
+    "config": {}
+  };
+    vegaEmbed("#vis3", specVis3, {mode: "vega-lite"}).then(console.log).catch(console.warn);
   </script>
 </body>
 
