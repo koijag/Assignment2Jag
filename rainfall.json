@@ -1,0 +1,175 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 1150,
+  "height": 900,
+  "title": {
+    "text": "Weekly Rainfall in Australia",
+    "fontSize": 24,
+    "font": "Lora",
+    "fontWeight": "bold",
+    "anchor": "middle",
+    "color": "#004d80"
+  },
+  "projection": {
+    "type": "mercator",
+    "center": [135, -28], 
+    "scale": 1200 
+  },
+  "params": [
+    {
+      "name": "rainfallThreshold",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 200,
+        "step": 5,
+        "name": "Max Rainfall (mm): ",
+        "element": "input-range"
+      }
+    }
+  ],
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/koijag/FIT3179-VIS-2/main/STE_2021_AUST_GDA94.json",
+        "format": {
+          "type": "topojson",
+          "feature": "STE_2021_AUST_GDA94"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#e0f7fa", 
+        "stroke": "#6e6e6e",  
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "opacity": 0.7, 
+        "size": 100,  
+        "tooltip": {"content": "data"}
+      },
+      "data": {
+        "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/rainfall.2024-10-10.weekly.aus.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum['Rainfall (mm)'] <= rainfallThreshold"
+        }
+      ],
+      "encoding": {
+        "longitude": {
+          "field": "Longitude (°)",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude (°)",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Rainfall (mm)",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "tealblues"  // Stick with blues, adjusted to "blues" for better visualization
+          },
+          "title": "Rainfall (mm)"
+        },
+        "tooltip": [
+          {"field": "Station name", "title": "Station"},
+          {"field": "Rainfall (mm)", "title": "Rainfall (mm)"},
+          {"field": "Latitude (°)", "title": "Latitude"},
+          {"field": "Longitude (°)", "title": "Longitude"}
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "font": "Lora",
+        "dx": 50,
+        "dy": 0
+      },
+      "encoding": {
+        "x": {"value": 180}, 
+        "y": {"value": 880},  
+        "text": {"value": "Adjust the slider to see the mm of rainfall across Australia"},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "font": "Lora",
+        "dx": 50,
+        "dy": 0
+      },
+      "encoding": {
+        "x": {"value": 180}, 
+        "y": {"value": 50}, 
+        "text": {"value": "Weekly rainfall data from weather stations across Australia"},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+      "data": {
+        "values": [{}]
+      },
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "font": "Lora",
+        "dx": 50,
+        "dy": 0
+      },
+      "encoding": {
+        "x": {"value": 900},  
+        "y": {"value": 50},  
+        "text": {"value": "This is rainfall data from October of 2024"},
+        "fill": {"value": "gray"}
+      }
+    },
+    {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Untitled_Artwork-1.png",
+          "x": 1000,  // Adjust position of the image
+          "y": 700,   // Adjust position of the image
+          "width": 200,
+          "height": 200,
+        }
+      },
+  ],
+  "config": {
+    "background": "#ffffff",
+    "axis": {
+      "labelFont": "Lora",
+      "titleFont": "Lora",
+      "labelFontSize": 12,
+      "titleFontSize": 14,
+      "grid": false
+    },
+    "legend": {
+      "titleFont": "Lora",
+      "labelFont": "Lora",
+      "titleFontSize": 14,
+      "labelFontSize": 12
+    }
+  }
+}
