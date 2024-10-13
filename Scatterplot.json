@@ -1,0 +1,118 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Scatter plot showing monthly rainfall data from 2014 to 2022 with an aesthetically enhanced rolling average line and an interactive hint.",
+    "width": 590, 
+    "height": 400, 
+    "data": {
+      "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/monthly_rainfall_data.csv"
+    },
+    "transform": [
+      {
+        "window": [{ "field": "Rainfall_mm", "op": "mean", "as": "rolling_mean" }],
+        "frame": [-5, 5]
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Date",
+        "type": "temporal",
+        "title": "Date",
+        "axis": { "format": "%Y", "labelAngle": -45, "grid": false }
+      },
+      "y": {
+        "type": "quantitative",
+        "axis": { "title": "Rainfall (mm)", "grid": false }
+      }
+    },
+    "layer": [
+      
+      {
+        "mark": { "type": "point", "size": 50, "opacity": 0.5, "color": "#2b7cb6" },
+        "encoding": {
+          "y": { "field": "Rainfall_mm", "title": "Monthly Rainfall" },
+          "tooltip": [
+            {
+              "field": "Date",
+              "type": "temporal",
+              "title": "Date",
+              "format": "%B %Y"
+            },
+            {
+              "field": "Rainfall_mm",
+              "type": "quantitative",
+              "title": "Rainfall (mm)",
+              "format": ".2f"
+            }
+          ]
+        }
+      },
+      {
+        "mark": {
+          "type": "line",
+          "color": "#fffff",
+          "size": 3,
+          "strokeDash": [5, 5]
+        },
+        "encoding": {
+          "y": { "field": "rolling_mean", "title": "Rolling Mean of Rainfall" }
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "image",
+          "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Untitled_Artwork-1.png",
+          "x": 100,  // Adjust position of the image
+          "y": 100,   // Adjust position of the image
+          "width": 100,
+          "height": 100,
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 14,
+          "fontStyle": "italic",
+          "font": "Lora",
+          "dx": 50,
+          "dy": 0
+        },
+        "encoding": {
+          "x": {"value": 80}, 
+          "y": {"value": 165},  
+          "text": {"value": "The dashed line represents"},
+          "fill": {"value": "gray"}
+        }
+      },
+      {
+        "data": {
+          "values": [{}]
+        },
+        "mark": {
+          "type": "text",
+          "fontSize": 14,
+          "fontStyle": "italic",
+          "font": "Lora",
+          "dx": 50,
+          "dy": 0
+        },
+        "encoding": {
+          "x": {"value": 80}, 
+          "y": {"value": 180},  
+          "text": {"value": "the rolling Mean of Rainfall"},
+          "fill": {"value": "gray"}
+        }
+      },
+      
+    ],
+    "config": {
+      "background": "white",
+      "axis": { "labelFontSize": 12, "titleFontSize": 14 },
+      "legend": { "titleFontSize": 13, "labelFontSize": 12 }
+    }
+  }
