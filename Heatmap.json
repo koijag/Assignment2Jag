@@ -1,0 +1,122 @@
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/main/2.3%20Distributed%20water%20use%20by%20selected%20industries(a)%20and%20households%2C%20Australia.csv"
+  },
+  "transform": [
+    {
+      "fold": [
+        "Agriculture",
+        "Households",
+        "Manufacturing",
+        "Mining",
+        "Other industries"
+      ],
+      "as": ["Sector", "Water use (GL)"]
+    }
+  ],
+  "mark": {
+    "type": "rect",
+    "tooltip": true,
+    "cornerRadius": 4
+  },
+  "width": 500,
+  "height": 400,
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {
+        "labelFont": "Lora",
+        "labelFontSize": 12,
+        "titleFont": "Lora",
+        "titleFontSize": 14,
+        "labelColor": "#333",
+        "titleColor": "#004d80"
+      }
+    },
+    "y": {
+      "field": "Sector",
+      "type": "nominal",
+      "title": "Sector",
+      "axis": {
+        "labelFont": "Lora",
+        "labelFontSize": 12,
+        "titleFont": "Lora",
+        "titleFontSize": 14,
+        "labelColor": "#333",
+        "titleColor": "#004d80"
+      }
+    },
+    "color": {
+      "field": "Water use (GL)",
+      "type": "quantitative",
+      "title": "Water use (GL)",
+      "scale": {
+        "scheme": "tealblues",
+        "domainMin": 0
+      },
+      "legend": {
+        "titleFont": "Lora",
+        "titleFontSize": 13,
+        "labelFont": "Lora",
+        "labelFontSize": 12,
+        "titleColor": "#004d80",
+        "labelColor": "#333"
+      }
+    },
+    "tooltip": [
+      { "field": "Year", "type": "ordinal", "title": "Year" },
+      { "field": "Sector", "type": "nominal", "title": "Sector" },
+      { "field": "Water use (GL)", "type": "quantitative", "title": "Water Use (GL)" }
+    ]
+  },
+  "title": {
+    "text": "Water Use Across Industries",
+    "fontSize": 20,
+    "font": "Lora",
+    "color": "#004d80",
+    "fontWeight": "bold",
+    "anchor": "center"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect"
+      },
+      "encoding": {
+        "x": { "field": "Year", "type": "ordinal" },
+        "y": { "field": "Sector", "type": "nominal" },
+        "color": { "field": "Water use (GL)", "type": "quantitative" }
+      }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Untitled_Artwork-1.png",
+        "width": 200,
+        "height": 200
+      },
+      "encoding": {
+        "x": { "value": 550 },  // Adjust this to position the image
+        "y": { "value": 400 }    // Adjust this to position the image
+      }
+    }
+  ],
+  "config": {
+    "background": "#ecfcff",
+    "axis": {
+      "labelFont": "Lora",
+      "titleFont": "Lora",
+      "labelFontSize": 12,
+      "titleFontSize": 14,
+      "grid": false
+    },
+    "legend": {
+      "titleFont": "Lora",
+      "labelFont": "Lora",
+      "titleFontSize": 14,
+      "labelFontSize": 12
+    }
+  }
+}
