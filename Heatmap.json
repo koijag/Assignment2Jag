@@ -1,3 +1,4 @@
+{
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
     "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/main/2.3%20Distributed%20water%20use%20by%20selected%20industries(a)%20and%20households%2C%20Australia.csv"
