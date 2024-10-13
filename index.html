@@ -1,7 +1,7 @@
 <!DOCTYPE html>  
 <html>
   <head>
-    <title>Multiple Visualisations | Improved Layout</title>
+    <title>Jag FIT3179 Assignment 2</title>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.30.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.26.0"></script>
@@ -143,9 +143,8 @@
       <!-- First row with heatmap, descriptive text, and image -->
       <div class="grid-row">
         <div class="grid-third" style="margin-top: 55px;">
-          <p class="text-next-to-map"> This page explores these dynamics, showcasing data and visualisations to highlight the key trends shaping Australia's water use across various industries.
-          </p>
-          <div class="image-container" >
+          <p class="text-next-to-map">This page explores these dynamics, showcasing data and visualisations to highlight the key trends shaping Australia's water use across various industries.</p>
+          <div class="image-container">
             <img src="https://www.the71percent.org/wp-content/uploads/2017/07/AdobeStock_56384031-1024x735.jpeg" alt="Water Usage Image">
             <p class="image-attribution">Source: Adobe Stock</p>
           </div>
@@ -163,40 +162,10 @@
             <li>2,108 GL of water was returned to the environment, up 13% year on year.</li>
           </ul>
         </div>
-      </div>           
-
-      <!-- Third row with image and scatter plot-->
-      <div class="grid-row">
-        <div class="grid-half">
-          <div class="vis-container">
-            <img
-              src="https://static.ffx.io/images/$zoom_0.099%2C$multiply_1.3545%2C$ratio_1.5%2C$width_756%2C$x_0%2C$y_0/t_crop_custom/q_86%2Cf_auto/f42dc563dd631b6109a35858bb3afc4a7c1eb281"
-              alt="Descriptive Image" />
-            <p class="image-attribution">Source: Fairfax Media</p>
-          </div>
-        </div>
-        <div class="grid-half">
-          <div class="vis-container"> 
-            <div id="vis4"></div>
-          </div>
-        </div>
       </div>
 
+      <!-- Add more rows with other visualizations as needed -->
 
-      <!-- Fourth row with text and map -->
-      <div class="center-map">
-        <div class="grid-third" style="margin-top: 60px;">
-            <p class="text-next-to-map">In 2021-22, the Water supply, sewerage and drainage services (WSSDS) industry extracted 11,898 GL of water from the environment. This water was sourced from:</p>
-            <ul class="text-next-to-map">
-                <li>Surface water: 11,106 GL or 93% of the total</li>
-                <li>Groundwater: 510 GL or 4% of the total</li>
-                <li>Sea water for desalination: 283 GL or 2% of the total</li>
-            </ul>
-            <p class="text-next-to-map">Over the year, the industry's distributed water consumption grew by 8%, reaching 7,336 GL. As water demands continue to rise, particularly in agriculture, managing and optimizing water resources is increasingly critical to the country’s sustainability goals. Water distribution in Australia is heavily influenced by the Agriculture, forestry, and fishing industry, which in 2021-22 accounted for a substantial 61% of the nation's total distributed water usage. This water, sourced from irrigation suppliers and paid river allocations, plays a crucial role in sustaining agricultural productivity.</p>
-        </div>
-        <div id="vis3" class="vis-container-large" style="margin-left: 150px;"></div>
-    </div>
-    
       <!-- Fifth row with rainfall map visualization -->
       <div class="vis-container-large">
         <div id="vis5" class="vis-container"></div>
@@ -205,26 +174,26 @@
 
     </div> <!-- end page -->
 
-    <!-- Footer with copyright -->
+    <!-- Footer -->
     <div class="footer">
       Copyright &copy; 2024 by Jagruti Shaw, FIT3179, Monash University
     </div>
 
- <script type="text/javascript">
+    <script type="text/javascript">
+      // Load the heatmap visualization
       vegaEmbed('#vis1', 'https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Heatmap.json', {actions: false}).then(console.log).catch(console.warn);
       
       // Load the butterfly chart
       vegaEmbed('#vis2', 'https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Butterfly.json', {actions: false}).then(console.log).catch(console.warn);
       
-      // Load the third visualization (e.g., map)
+      // Load the choropleth map visualization
       vegaEmbed('#vis3', 'https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Chloropleth.json', {actions: false}).then(console.log).catch(console.warn);
 
-      // Load the rainfall scatter plot
+      // Load the scatter plot visualization
       vegaEmbed('#vis4', 'https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Scatterplot.json', {actions: false}).then(console.log).catch(console.warn);
 
-      // Load the rainfall map
+      // Load the rainfall map visualization
       vegaEmbed('#vis5', 'https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/rainfall.json', {actions: false}).then(console.log).catch(console.warn);
- </script>
-</body>
-
+    </script>
+  </body>
 </html>
