@@ -1,132 +1,127 @@
 {
-        "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/koijag/FIT3179-VIS-2/main/STE_2021_AUST_GDA94.json",
+    "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA94"}
+  },
+  "transform": [
+    {
+      "lookup": "properties.STE_NAME21",
+      "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/koijag/FIT3179-VIS-2/main/STE_2021_AUST_GDA94.json",
-          "format": {"type": "topojson", "feature": "STE_2021_AUST_GDA94"}
+          "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/table_12_3.csv"
         },
-        "transform": [
-          {
-            "lookup": "properties.STE_NAME21",
-            "from": {
-              "data": {
-                "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/table_12_3.csv"
-              },
-              "key": "Region",
-              "fields": [
-                "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"
-              ]
-            }
+        "key": "Region",
+        "fields": [
+          "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"
+        ]
+      }
+    },
+    {
+      "fold": [
+        "2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"
+      ],
+      "as": ["Year", "Water_Usage"]
+    },
+    {
+      "filter": "datum['Water_Usage'] != null"
+    },
+    {
+      "filter": "datum.Year == year_selection"
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "width": 600,
+  "height": 500,
+  "title": {
+    "text": "Water Distribution Across Australian States",
+    "fontSize": 22,
+    "font": "Lora",
+    "fontWeight": "bold",
+    "anchor": "start",
+    "color": "#004d80"
+  },
+  "params": [
+    {
+      "name": "year_selection",
+      "value": "2021-22",
+      "bind": {
+        "element": "#year-selection",
+        "input": "select",
+        "options": ["2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"],
+        "name": "Select Year: "
+      }
+    }
+  ],
+  "layer": [
+    {
+      "mark": "geoshape",
+      "encoding": {
+        "color": {
+          "field": "Water_Usage",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "tealblues"
           },
-          {
-            "fold": ["2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"],
-            "as": ["Year", "Water_Usage"]
-          },
-          {
-            "filter": "datum['Water_Usage'] != null"
-          },
-          {
-            "filter": "datum.Year == year_selection"
-          }
-        ],
-        "projection": {"type": "mercator"},
-        "width": 600,
-        "height": 500,
-        "title": {
-          "text": "Water Distribution Across Australian States",
-          "fontSize": 22,
-          "font": "Lora",
-          "fontWeight": "bold",
-          "anchor": "start",
-          "color": "#004d80"
-        },
-        "params": [
-          {
-            "name": "year_selection",
-            "value": "2021-22",
-            "bind": {
-              "element": "#year-selection",
-              "input": "select",
-              "options": ["2014-15", "2015-16", "2016-17", "2017-18", "2018-19", "2019-20", "2020-21", "2021-22"],
-              "name": "Select Year: "
-            }
-          }
-        ],
-        "layer": [
-          {
-            "mark": "geoshape",
-            "encoding": {
-              "color": {
-                "field": "Water_Usage",
-                "type": "quantitative",
-                "scale": {
-                  "scheme": "tealblues"
-                },
-                "title": "(GL)",
-                "legend": {
-                  "orient": "none",
-                  "legendX": 550,
-                  "legendY": 20,
-                  "titleFont": "Lora",
-                  "labelFont": "Lora",
-                  "titleFontSize": 14,
-                  "labelFontSize": 12
-                }
-              },
-              "tooltip": [
-                {"field": "properties.STE_NAME21", "type": "nominal", "title": "State"},
-                {"field": "Year", "type": "ordinal", "title": "Year"},
-                {"field": "Water_Usage", "type": "quantitative", "title": "Water Supply (GL)"}
-              ]
-            }
-          },
-        
-          {
-        "data": {
-          "values": [{}]
-        },
-        "mark": {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Untitled_Artwork-1.png",
-          "x": 550,  
-          "y": 400,   
-          "width": 200,
-          "height": 200,
-        }
-      },
-      {
-        "data": {
-          "values": [{}]
-        },
-          "mark": {
-            "type": "text",
-            "fontSize": 14,
-            "fontStyle": "italic",
-            "font": "Lora",
-            "dx": 50,
-            "dy": 0
-          },
-          "encoding": {
-            "x": {"value": 150},
-            "y": {"value": 450},
-            "text": {"value": "WA consistently has the highest water usage across Aus"},
-            "fill": {"value": "gray"}
-          }
-        },
-        ],
-        "config": {
-          "background": "#ecfcff",
-          "axis": {
-            "labelFont": "Lora",
-            "titleFont": "Lora",
-            "labelFontSize": 12,
-            "titleFontSize": 14,
-            "grid": false
-          },
+          "title": "(GL)",
           "legend": {
+            "orient": "none",
+            "legendX": 550,
+            "legendY": 20,
             "titleFont": "Lora",
             "labelFont": "Lora",
             "titleFontSize": 14,
             "labelFontSize": 12
           }
-        }
+        },
+        "tooltip": [
+          {"field": "properties.STE_NAME21", "type": "nominal", "title": "State"},
+          {"field": "Year", "type": "ordinal", "title": "Year"},
+          {"field": "Water_Usage", "type": "quantitative", "title": "Water Supply (GL)"}
+        ]
       }
+    },
+    {
+      "mark": {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Untitled_Artwork-1.png",
+        "x": 550,
+        "y": 400,
+        "width": 200,
+        "height": 200
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "font": "Lora",
+        "dx": 50,
+        "dy": 0
+      },
+      "encoding": {
+        "x": {"value": 150},
+        "y": {"value": 450},
+        "text": {"value": "WA consistently has the highest water usage across Aus"},
+        "fill": {"value": "gray"}
+      }
+    }
+  ],
+  "config": {
+    "background": "#ecfcff",
+    "axis": {
+      "labelFont": "Lora",
+      "titleFont": "Lora",
+      "labelFontSize": 12,
+      "titleFontSize": 14,
+      "grid": false
+    },
+    "legend": {
+      "titleFont": "Lora",
+      "labelFont": "Lora",
+      "titleFontSize": 14,
+      "labelFontSize": 12
+    }
+  }
+}
