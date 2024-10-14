@@ -1,106 +1,107 @@
 {
-"$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-        "description": "A butterfly bar chart showing expenditure and physical use of distributed water in Australia.",
-        "title": {
-          "text": "Industry and Household Usage Comparison",
-          "fontSize": 20,
-          "font": "Lora",
-          "color": "#004d80",
-          "fontWeight": "bold",
-          "anchor": "middle"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A butterfly bar chart showing expenditure and physical use of distributed water in Australia.",
+  "title": {
+    "text": "Industry and Household Usage Comparison",
+    "fontSize": 20,
+    "font": "Lora",
+    "color": "#004d80",
+    "fontWeight": "bold",
+    "anchor": "middle"
+  },
+  "data": {
+    "values": [
+      { "Category": "Industries", "Type": "Expenditure", "Value": 3.16 },
+      { "Category": "Industries", "Type": "Physical Use", "Value": 10.2 },
+      { "Category": "Households", "Type": "Expenditure", "Value": 6.09 },
+      { "Category": "Households", "Type": "Physical Use", "Value": 1.8 }
+    ]
+  },
+  "spacing": 50,
+  "hconcat": [
+    {
+      "transform": [{ "filter": "datum.Type == 'Expenditure'" }],
+      "mark": { "type": "bar", "color": "#1f77b4", "cornerRadius": 4 },
+      "encoding": {
+        "y": {
+          "field": "Category",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
         },
-        "data": {
-          "values": [
-            { "Category": "Industries", "Type": "Expenditure", "Value": 3.16 },
-            { "Category": "Industries", "Type": "Physical Use", "Value": 10.2 },
-            { "Category": "Households", "Type": "Expenditure", "Value": 6.09 },
-            { "Category": "Households", "Type": "Physical Use", "Value": 1.8 }
-          ]
-        },
-        "spacing": 50,
-        "hconcat": [
-          {
-            "transform": [{ "filter": "datum.Type == 'Expenditure'" }],
-            "mark": { "type": "bar", "color": "#1f77b4", "cornerRadius": 4 },
-            "encoding": {
-              "y": {
-                "field": "Category",
-                "type": "ordinal",
-                "axis": null,
-                "sort": "descending"
-              },
-              "x": {
-                "field": "Value",
-                "type": "quantitative",
-                "title": "Expenditure ($ billions)",
-                "axis": {
-                  "labelFont": "Lora",
-                  "labelFontSize": 12,
-                  "titleFont": "Lora",
-                  "titleFontSize": 14,
-                  "labelColor": "#333"
-                },
-                "scale": { "domain": [0, 7], "reverse": true }
-              },
-              "tooltip": [
-                { "field": "Category", "type": "nominal", "title": "Category" },
-                { "field": "Value", "type": "quantitative", "title": "Expenditure ($ billions)" }
-              ]
-            }
-          },
-          {
-            "width": 20,
-            "view": { "stroke": null },
-            "mark": { "type": "text", "align": "center" },
-            "encoding": {
-              "y": {
-                "field": "Category",
-                "type": "ordinal",
-                "axis": null,
-                "sort": "descending"
-              },
-              "text": { "field": "Category", "type": "ordinal" }
-            }
-          },
-          {
-            "transform": [{ "filter": "datum.Type == 'Physical Use'" }],
-            "mark": { "type": "bar", "color": "#4fa3d9", "cornerRadius": 4 },
-            "encoding": {
-              "y": {
-                "field": "Category",
-                "type": "ordinal",
-                "axis": null,
-                "sort": "descending"
-              },
-              "x": {
-                "field": "Value",
-                "type": "quantitative",
-                "title": "Physical Use (GL)",
-                "axis": {
-                  "labelFont": "Lora",
-                  "labelFontSize": 12,
-                  "titleFont": "Lora",
-                  "titleFontSize": 14,
-                  "labelColor": "#333"
-                },
-                "scale": { "domain": [0, 10] }
-              },
-              "tooltip": [
-                { "field": "Category", "type": "nominal", "title": "Category" },
-                { "field": "Value", "type": "quantitative", "title": "Physical Use (GL)" }
-              ]
-            }
-          }
-        ],
-
-        "config": {
-          "background": "#ecfcff",
+        "x": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Expenditure ($ billions)",
           "axis": {
             "labelFont": "Lora",
-            "titleFont": "Lora",
             "labelFontSize": 12,
+            "titleFont": "Lora",
             "titleFontSize": 14,
-            "grid": false
-          }
-        }
+            "labelColor": "#333",
+            "titleColor": "#004d80"
+          },
+          "scale": { "domain": [0, 7], "reverse": true }
+        },
+        "tooltip": [
+          { "field": "Category", "type": "nominal", "title": "Category" },
+          { "field": "Value", "type": "quantitative", "title": "Expenditure ($ billions)" }
+        ]
+      }
+    },
+    {
+      "width": 20,
+      "view": { "stroke": null },
+      "mark": { "type": "text", "align": "center" },
+      "encoding": {
+        "y": {
+          "field": "Category",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
+        },
+        "text": { "field": "Category", "type": "ordinal" }
+      }
+    },
+    {
+      "transform": [{ "filter": "datum.Type == 'Physical Use'" }],
+      "mark": { "type": "bar", "color": "#4fa3d9", "cornerRadius": 4 },
+      "encoding": {
+        "y": {
+          "field": "Category",
+          "type": "ordinal",
+          "axis": null,
+          "sort": "descending"
+        },
+        "x": {
+          "field": "Value",
+          "type": "quantitative",
+          "title": "Physical Use (GL)",
+          "axis": {
+            "labelFont": "Lora",
+            "labelFontSize": 12,
+            "titleFont": "Lora",
+            "titleFontSize": 14,
+            "labelColor": "#333",
+            "titleColor": "#004d80"
+          },
+          "scale": { "domain": [0, 10] }
+        },
+        "tooltip": [
+          { "field": "Category", "type": "nominal", "title": "Category" },
+          { "field": "Value", "type": "quantitative", "title": "Physical Use (GL)" }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#ecfcff",
+    "axis": {
+      "labelFont": "Lora",
+      "titleFont": "Lora",
+      "labelFontSize": 12,
+      "titleFontSize": 14,
+      "grid": false
+    }
+  }
 }
