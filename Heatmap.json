@@ -83,7 +83,8 @@
   "layer": [
     {
       "mark": {
-        "type": "rect"
+        "type": "rect",
+        "cornerRadius": 4
       },
       "encoding": {
         "x": { "field": "Year", "type": "ordinal" },
