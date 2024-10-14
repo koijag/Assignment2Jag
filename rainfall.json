@@ -12,8 +12,8 @@
   },
   "projection": {
     "type": "mercator",
-    "center": [135, -28], 
-    "scale": 1200 
+    "center": [135, -28],
+    "scale": 1200
   },
   "params": [
     {
@@ -40,16 +40,16 @@
       },
       "mark": {
         "type": "geoshape",
-        "fill": "#e0f7fa", 
-        "stroke": "#6e6e6e",  
+        "fill": "#e0f7fa",
+        "stroke": "#6e6e6e",
         "strokeWidth": 0.5
       }
     },
     {
       "mark": {
         "type": "circle",
-        "opacity": 0.7, 
-        "size": 100,  
+        "opacity": 0.7,
+        "size": 100,
         "tooltip": {"content": "data"}
       },
       "data": {
@@ -73,7 +73,7 @@
           "field": "Rainfall (mm)",
           "type": "quantitative",
           "scale": {
-            "scheme": "tealblues"  // Stick with blues, adjusted to "blues" for better visualization
+            "scheme": "tealblues"
           },
           "title": "Rainfall (mm)"
         },
@@ -98,8 +98,8 @@
         "dy": 0
       },
       "encoding": {
-        "x": {"value": 180}, 
-        "y": {"value": 880},  
+        "x": {"value": 180},
+        "y": {"value": 880},
         "text": {"value": "Adjust the slider to see the mm of rainfall across Australia"},
         "fill": {"value": "gray"}
       }
@@ -117,8 +117,8 @@
         "dy": 0
       },
       "encoding": {
-        "x": {"value": 180}, 
-        "y": {"value": 50}, 
+        "x": {"value": 180},
+        "y": {"value": 50},
         "text": {"value": "Weekly rainfall data from weather stations across Australia"},
         "fill": {"value": "gray"}
       }
@@ -136,25 +136,25 @@
         "dy": 0
       },
       "encoding": {
-        "x": {"value": 900},  
-        "y": {"value": 50},  
+        "x": {"value": 900},
+        "y": {"value": 50},
         "text": {"value": "This is rainfall data from October of 2024"},
         "fill": {"value": "gray"}
       }
     },
     {
-        "data": {
-          "values": [{}]
-        },
-        "mark": {
-          "type": "image",
-          "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Untitled_Artwork-1.png",
-          "x": 1000,  // Adjust position of the image
-          "y": 700,   // Adjust position of the image
-          "width": 200,
-          "height": 200,
-        }
+      "data": {
+        "values": [{}]
       },
+      "mark": {
+        "type": "image",
+        "url": "https://raw.githubusercontent.com/koijag/Week-9-repo/refs/heads/main/Untitled_Artwork-1.png",
+        "x": 1000,
+        "y": 700,
+        "width": 200,
+        "height": 200
+      }
+    }
   ],
   "config": {
     "background": "#ffffff",
